@@ -19,16 +19,16 @@ Todo
 * This is a backend part website. Frontend part: https://github.com/KaratSergio/Market
 	
 ## Technologies
-Todo
-
-example:
 Project is created with:
-
-example: asgiref==3.6.0
+asgiref==3.8.1
+Django==5.1.6
+psycopg==3.2.4
+psycopg-binary==3.2.4
+sqlparse==0.5.3
 
 <details><summary>Other Technologies (CLICK ME)</summary>
 <ul>
-<li>asgiref==3.6.0</li>
+<li>example</li>
 </ul>
 </details>
 
