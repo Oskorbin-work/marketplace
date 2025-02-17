@@ -33,7 +33,31 @@ example: asgiref==3.6.0
 </details>
 
 ## Setup
-Todo
+1. install python 13.0.2.
+2. install postgres 17.2.
+3. In postgres:
+   1. create role marketplace_admin
+   2. create datebase marketplace_db
+4. create folder for marketplace.
+5. In terminal:
+   1. python3 -m venv python3_13
+   2. git clone https://github.com/Oskorbin-work/marketplace.git
+   3. cd marketplace/core
+6. create file "secret.py". Write to file (!!!!!!YOU MUST USE YOUR PASSWORDS!!!!!):
+```python
+# config settings.py
+SECRET_KEY = YOU_secret_key_DJANGO
+# postgresql
+DB_ENGINE = 'django.db.backends.postgresql'
+DB_NAME = 'marketplace_db'
+DB_USER = 'marketplace_admin'
+DB_PASSWORD = YOU_PASSWORD
+DB_HOST = '127.0.0.1'
+DB_PORT = '5432'
+```
+5. python manage.py makemigrations
+6. python manage.py migrate
+7. python manage.py runserver
 
 # Screenshots
 Todo
