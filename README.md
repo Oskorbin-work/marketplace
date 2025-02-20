@@ -43,7 +43,7 @@ sqlparse==0.5.3
    1. python3 -m venv python3_13
    2. git clone https://github.com/Oskorbin-work/marketplace.git
    3. cd marketplace/core
-6. create file "secret.py". Write to file (!!!!!!YOU MUST USE YOUR PASSWORDS!!!!!):
+6. create file "secret.py" (path – app "core"). Write to file (!!!!!!YOU MUST USE YOUR PASSWORDS!!!!!):
 ```python
 # config settings.py
 SECRET_KEY = YOU_secret_key_DJANGO
