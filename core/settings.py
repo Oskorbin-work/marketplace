@@ -78,13 +78,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': secret.DB_ENGINE,
-        'NAME': secret.DB_NAME,
-        'USER': secret.DB_USER,
-        'PASSWORD': secret.DB_PASSWORD,
-        'HOST': secret.DB_HOST,
-        'PORT': secret.DB_PORT,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME':  os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    # 'default': {
+    #     'ENGINE': secret.DB_ENGINE,
+    #     'NAME': secret.DB_NAME,
+    #     'USER': secret.DB_USER,
+    #     'PASSWORD': secret.DB_PASSWORD,
+    #     'HOST': secret.DB_HOST,
+    #     'PORT': secret.DB_PORT,
+    # }
 }
 
 
