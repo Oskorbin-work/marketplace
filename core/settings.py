@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'health'
 ]
 
 MIDDLEWARE = [
@@ -75,13 +77,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'production': {
         'ENGINE': secret.DB_ENGINE,
         'NAME': secret.DB_NAME,
         'USER': secret.DB_USER,
         'PASSWORD': secret.DB_PASSWORD,
         'HOST': secret.DB_HOST,
         'PORT': secret.DB_PORT,
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
